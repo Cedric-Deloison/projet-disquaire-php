@@ -1,5 +1,3 @@
-
-
 <?php
 
 include "1entete.html";
@@ -14,5 +12,5 @@ $dbh = NULL;
 ?>
 
 </body>
-</html>
 
+</html>
