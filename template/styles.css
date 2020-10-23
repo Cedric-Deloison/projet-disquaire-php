@@ -1,5 +1,5 @@
 body {
-    background-image: url(back.jpg);
+    background-image: url(template/back.jpg);
     background-position: center center;
     background-size: cover;
   }
@@ -19,3 +19,12 @@ body {
   .card-title  {
     color: red;
   }
+
+  h1{
+    font-family: 'Finger Paint', cursive;
+  }
+  p, h2, h3 {
+    font-family: 'Zilla Slab Highlight', cursive;
+  }
+
+ 
