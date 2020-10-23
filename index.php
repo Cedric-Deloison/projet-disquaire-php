@@ -1,16 +1,12 @@
 <?php
 
-include "1entete.html";
-include "2mes_fonctions.php";
-include "3utilisateurs.php";
-include "4disquaire.php";
-
-// On libère les ressources MySQL
-$dbh = NULL;
+include "classes/page.php";
+include "inc/config.php";
 
 
-?>
+$ma_page = new Page();
 
-</body>
 
-</html>
+$ma_page->prepare();
+
+echo $ma_page;

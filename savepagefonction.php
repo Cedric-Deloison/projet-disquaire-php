@@ -1,6 +1,6 @@
 <?php
 
-
+/*
 
 function album($photo, $titre, $album, $annee, $genre, $artiste)
 {
@@ -95,3 +95,4 @@ function affich($photo, $titre, $album, $annee, $genre, $artiste)
 //        }
     
 //    }
+*/

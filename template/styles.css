@@ -1,0 +1,21 @@
+body {
+    background-image: url(back.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  /* NavBar */
+  
+  .ced-logo img {
+    height: 80px;
+  }
+  .ced-logo {
+    background-color: #3b3b39;
+  }
+  .card {
+    height: 100px;
+  }
+
+  .card-title  {
+    color: red;
+  }
