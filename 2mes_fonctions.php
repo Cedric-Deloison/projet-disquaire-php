@@ -2,9 +2,9 @@
 
 
 
-function album($photo, $titre, $album, $annee, $genre, $artiste)
+function album($id, $photo, $titre, $album, $annee, $genre, $artiste, $description)
 {
-    echo "<img src=$photo width='290' height='200'>";
+    echo "<a href=description.php?id=$id> <img src=$photo width='290' height='200'></a>";
     echo "<h4>Titre chanson : <br>$titre</h4>
     <table>";
 
@@ -27,6 +27,10 @@ function album($photo, $titre, $album, $annee, $genre, $artiste)
         if ($col == 5) {
             echo "<tr>";
             echo "<td> Artiste : " . $artiste . "</td>";
+        }
+        if ($col == 5) {
+            echo "<tr>";
+            echo "<td> Description : " . $description . "</td>";
         }
     }
 
@@ -78,10 +82,10 @@ function album($photo, $titre, $album, $annee, $genre, $artiste)
 //     echo "</table>";
 // }
 
-function affich($photo, $titre, $album, $annee, $genre, $artiste)
+function affich($id, $photo, $titre, $album, $annee, $genre, $artiste, $description)
 {
     echo "<div col-sm-6 class=mgimg>";
-    album($photo, $titre, $album, $annee, $genre, $artiste);
+    album($id, $photo, $titre, $album, $annee, $genre, $artiste, $description);
     echo "</div>";
 }
     
