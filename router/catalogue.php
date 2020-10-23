@@ -49,9 +49,9 @@ function album($photo, $titre, $album, $annee, $genre, $artiste, $description)
 
 function affich($photo, $titre, $album, $annee, $genre, $artiste, $description)
 {
-  return "<div col-sm-6 class=mgimg>" .
+    return "<div col-sm-6 class=mgimg>" .
     album($photo, $titre, $album, $annee, $genre, $artiste, $description) .
-    "</div>";
+    "</div> </div>"; 
 }
 
 ?>

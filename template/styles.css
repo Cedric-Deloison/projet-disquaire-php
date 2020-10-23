@@ -12,9 +12,7 @@ body {
   .ced-logo {
     background-color: #3b3b39;
   }
-  .card {
-    height: 100px;
-  }
+  
 
   .card-title  {
     color: red;
