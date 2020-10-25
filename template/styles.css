@@ -7,10 +7,11 @@ body {
 
 .container1 {
   
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap:  wrap;
+    /* grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 680px);
-    grid-gap: 1em 20px;
+    grid-gap: 1em 20px; */
     height: auto;
     width: 100%;
   
@@ -53,25 +54,30 @@ body {
     margin-right: 20%;
     height: 780px; 
     background-color: #e3e4e6;
+    margin-top: 30px;
   }
 
   .jumbotron img {
     vertical-align: middle;
     border-style: none;
-    height: 300px;
-    width: 600px;
+    height: 200px;
+    width: 400px;
     margin-right: 20%;
     margin-left: 20%;
   }
  .jumbotron p {
    color: #5f93fa;
  }
+ .jumbotron p.lead {
+  color: #3876f2;
+}
+
  /* Footer  */
  .card {
   background-color: black;
   color: wheat;
   height: auto;
+  margin: 20px;
 }  
-.jumbotron p.lead {
-  color: #3876f2;
-}
+
+/* Fin */

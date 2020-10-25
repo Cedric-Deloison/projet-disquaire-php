@@ -20,9 +20,8 @@ foreach ($dbh->query($sql) as $row) {
   $description = $row['descriptionAlbums'];
 
 
-  $contenu .= "<div class='row'>";
+
   $contenu .= affich($photo, $titre, $album, $annee, $genre, $artiste, $description);
-  $contenu .=  "</div>";
 }
 
 
@@ -49,9 +48,8 @@ function album($photo, $titre, $album, $annee, $genre, $artiste, $description)
 
 function affich($photo, $titre, $album, $annee, $genre, $artiste, $description)
 {
-  return "<div col-sm-6>" .
-    album($photo, $titre, $album, $annee, $genre, $artiste, $description) .
-    "</div>";
+  return
+    album($photo, $titre, $album, $annee, $genre, $artiste, $description);
 }
 
 ?>
