@@ -9,7 +9,7 @@ body {
   
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 615px);
+    grid-template-rows: repeat(3, 680px);
     grid-gap: 1em 20px;
     height: auto;
     width: 100%;
