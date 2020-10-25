@@ -1,9 +1,8 @@
 <?php
 
-
-$sql =  'SELECT U.id, titre, alimage, annee, album, N.styles, genre, M.noms, description_a 
-FROM albums U, genres N, artistes M, descriptions D
-WHERE N.id = U.genre AND M.id = U.artiste AND U.id = .$id. AND D.id = descriptionAlbums
+$sql =  'SELECT titre, alimage, annee, album, styles, genre, noms , descriptionAlbums
+FROM albums U, genres N, artistes M , descriptions D
+WHERE N.id = U.genre AND M.id = U.artiste AND D.id = U.description
 ORDER BY album';
 
 if (isset($_GET['id'])){
@@ -40,12 +39,13 @@ function album($id, $photo, $titre, $album, $annee, $genre, $artiste, $descripti
   <img src='template/$photo' class='card-img-top' alt='...'>
   <a href=description.php?id=$id> <img src=$photo width='290' height='200'></a>
   <div class='card-body'>
-    <h2 class='card-title'>$titre</h2>
+    <h4 class='card-title'>$titre</h4>
     <h5>Nom de l'album :<br> $album</h5>
     <h5>Nom de l'artiste :<br>  $artiste</h5>
     <h5>Année de parution :<br>  $annee</h5>
     <h5>Genre musical :<br>  $genre</h5>
-    <h5>Description :<br>  $description</h5>
+    <h5>description :<br>  $description</h5>
+   
     <a href='#' class='btn btn-primary'>Cliquez ici pour le reserver</a>
   </div>
 </div>";
@@ -55,8 +55,8 @@ function album($id, $photo, $titre, $album, $annee, $genre, $artiste, $descripti
 
 function affich($id, $photo, $titre, $album, $annee, $genre, $artiste, $description)
 {
-  return "<div col-sm-6 class=mgimg>" .
-    album($id, $photo, $titre, $album, $annee, $genre, $artiste, $description) .
+  return "<div col-sm-6>" .
+    album($photo, $titre, $album, $annee, $genre, $artiste, $description) .
     "</div>";
 }
 

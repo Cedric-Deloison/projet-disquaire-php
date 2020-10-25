@@ -23,7 +23,7 @@ class Page
 
         $contenu = str_replace("{{ sous-titre }}", "Notre site dynamique, c'est de la dynamite", $contenu);
 
-
+        $contenu = str_replace("{{ description }}", "", $contenu);
 
         return $contenu;
     }

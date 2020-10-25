@@ -1,6 +1,7 @@
 <?php
 include "classes/page.php";
 include "inc/config.php";
+include "router/catalogue.php";
 
 if (isset($_GET['id'])){
     $id = $_GET['id'];
