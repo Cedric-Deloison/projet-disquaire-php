@@ -32,7 +32,7 @@ function album($photo, $titre, $album, $annee, $genre, $artiste, $description)
 {
 
   return "<div class='card' style='width: 18rem;'>
-  <img src='template/$photo' class='card-img-top' alt='...' >
+  <img src='template/$photo' class='card-img-top' alt='...'>
   <div class='card-body'>
     <h4 class='card-title'>$titre</h4>
     <h5>Nom de l'album :<br> $album</h5>

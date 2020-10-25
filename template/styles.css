@@ -2,18 +2,17 @@ body {
     background-image: url(/template/back.jpg);
     background-position: center center;
     background-size: cover;
+    background-color: wheat;
   }
   
   /* NavBar */
-  
-   .ced-logo img {
-    height: 80px;
-  }
 .container1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 615px);
-  grid-gap: 1em 20px;  
+  grid-gap: 1em 20px; 
+  margin-top: 50px; 
+  height: auto;
 }
 
 .card-body {
@@ -21,7 +20,7 @@ body {
 }
 .card {
   height: 615px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .row {
   padding: 15px;
