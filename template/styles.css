@@ -1,18 +1,19 @@
 body {
-    background-image: url(/template/back.jpg);
+    /* background-image: url(/template/back.jpg);
     background-position: center center;
-    background-size: cover;
-    background-color: wheat;
+    background-size: cover; */
+    background-color:lightgray;
   }
 
-  /* NavBar */
 .container1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 615px);
-  grid-gap: 1em 20px; 
-  margin-top: 50px; 
-  height: auto;
+  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 615px);
+    grid-gap: 1em 20px;
+    height: auto;
+    width: 100%;
+  
 }
 .navbar {
   background-color: grey;
@@ -46,4 +47,31 @@ body {
     color: wheat;
   }
 
-  
+  .jumbotron {
+    width: 1080px;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 780px; 
+    background-color: #e3e4e6;
+  }
+
+  .jumbotron img {
+    vertical-align: middle;
+    border-style: none;
+    height: 300px;
+    width: 600px;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+ .jumbotron p {
+   color: #5f93fa;
+ }
+ /* Footer  */
+ .card {
+  background-color: black;
+  color: wheat;
+  height: auto;
+}  
+.jumbotron p.lead {
+  color: #3876f2;
+}
