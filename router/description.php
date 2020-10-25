@@ -1,6 +1,7 @@
 <?php
-include "3utilisateurs.php";
-include "2mes_fonctions.php";
+include "classes/page.php";
+include "inc/config.php";
+
 if (isset($_GET['id'])){
     $id = $_GET['id'];
 $sql =  'SELECT U.id, titre, alimage, annee, album, N.styles, genre, M.noms, description_a 
@@ -19,8 +20,10 @@ foreach ($dbh->query($sql) as $row) {
 
 
     echo "<div class='row'>";
+    album($id, $photo, $titre, $album, $annee, $genre, $artiste);
     affich($id, $photo, $titre, $album, $annee, $genre, $artiste, $description);
     echo "</div>";
+}
 }
 }else{
     echo "Rien afficher";
