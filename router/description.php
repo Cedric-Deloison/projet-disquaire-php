@@ -17,14 +17,13 @@ foreach ($dbh->query($sql) as $row) {
     $genre = $row['styles'];
     $photo = $row['alimage'];
     $artiste = $row['noms'];
-    $description = $row['description_a'];
+    $description = $row['description'];
 
 
     echo "<div class='row'>";
-    album($id, $photo, $titre, $album, $annee, $genre, $artiste);
+    album($id, $photo, $titre, $album, $annee, $genre, $artiste, $description);
     affich($id, $photo, $titre, $album, $annee, $genre, $artiste, $description);
     echo "</div>";
-}
 }
 }else{
     echo "Rien afficher";

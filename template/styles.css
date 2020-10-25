@@ -1,27 +1,35 @@
 body {
-    background-image: url(/template/back.jpg);
+    /* background-image: url(/template/back.jpg);
     background-position: center center;
-    background-size: cover;
+    background-size: cover; */
+    background-color:lightgray;
   }
-  
-  /* NavBar */
-  
-   .ced-logo img {
-    height: 80px;
-  }
-.container1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 615px);
-  grid-gap: 1em 20px;  
-}
 
+.container1 {
+  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 680px);
+    grid-gap: 1em 20px;
+    height: auto;
+    width: 100%;
+  
+}
+.navbar {
+  background-color: grey;
+}
 .card-body {
   background-color:#42413e;
 }
+.card-img, .card-img-bottom, .card-img-top {
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	width: 100%;
+	height: 286px;
+}
 .card {
   height: 615px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .row {
   padding: 15px;
@@ -39,4 +47,31 @@ body {
     color: wheat;
   }
 
-  
+  .jumbotron {
+    width: 1080px;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 780px; 
+    background-color: #e3e4e6;
+  }
+
+  .jumbotron img {
+    vertical-align: middle;
+    border-style: none;
+    height: 300px;
+    width: 600px;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+ .jumbotron p {
+   color: #5f93fa;
+ }
+ /* Footer  */
+ .card {
+  background-color: black;
+  color: wheat;
+  height: auto;
+}  
+.jumbotron p.lead {
+  color: #3876f2;
+}
