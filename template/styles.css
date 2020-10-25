@@ -4,7 +4,7 @@ body {
     background-size: cover;
     background-color: wheat;
   }
-  
+
   /* NavBar */
 .container1 {
   display: grid;
@@ -14,9 +14,17 @@ body {
   margin-top: 50px; 
   height: auto;
 }
-
+.navbar {
+  background-color: grey;
+}
 .card-body {
   background-color:#42413e;
+}
+.card-img, .card-img-bottom, .card-img-top {
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	width: 100%;
+	height: 286px;
 }
 .card {
   height: 615px;
