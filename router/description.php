@@ -1,7 +1,6 @@
 <?php
-include "classes/page.php";
-include "inc/config.php";
-include "router/catalogue.php";
+
+$contenu ="";
 
 if (isset($_GET['id'])){
     $id = $_GET['id'];
@@ -20,11 +19,13 @@ foreach ($dbh->query($sql) as $row) {
     $description = $row['description'];
 
 
-    echo "<div class='row'>";
+    $contenu .= "<div class='row'>";
     album($id, $photo, $titre, $album, $annee, $genre, $artiste, $description);
     affich($id, $photo, $titre, $album, $annee, $genre, $artiste, $description);
-    echo "</div>";
+    $contenu .= "</div>";
 }
 }else{
-    echo "Rien afficher";
+    $contenu .= "Rien afficher";
 }
+
+$texte = array("titre"=> "Description","contenu"=>$contenu);
