@@ -1,31 +1,62 @@
+
 <?php
 
+
+$sql = "SELECT * FROM albums U, artistes M WHERE U.id = $_GET[id] AND U.artiste = M.id";
+
+foreach ($dbh->query($sql) as $row) {
+  $album = $row['album'];
+  $titre = $row['titre'];
+  $annee = $row['annee'];
+  $photo = $row['alimage'];
+  $artiste = $row['noms'];
+}
+
+$contenu = '
+      <div class="form">
+      <h2>Formulaire de réservation</h2>
+
+      <form action="resultat-post.php" method="post">
+          <div class="form-group">
+          <img src="template/' . $photo . '" class="card-img-top" alt="..." >
+          </div>
+          <div class="form-group">
+            <label >Nom :</label>
+            <input
+              type="text"
+              name="nom" required />
+          </div>
+          <div class="form-group">
+            <label >Prénom :</label>
+            <input
+              type="text"
+              name="prenom" required/>
+          </div>
+          <div class="form-group">
+            <label >Email :</label>
+            <input
+              type="email"
+              name="email"      />
+          </div>
+          <div class="form-group form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"required  />
+            <label class="form-check-label" for="exampleCheck1">
+              J accepte que mes données ci-dessus soient traitées à des
+              fins de prises de contact commerciales.</label
+            >
+          </div>
+          <div class="text-center">
+            <button type="submit" class="Envoyer">
+              Envoyer
+            </button>
+          </div>
+        </form>
+  </div>';
+
+
+$texte = array("contenu" => $contenu);
 
 ?>
-<h1>Notre formulaire de résevation</h1>
-
-
-<!-- Footer -->
-<form method="post" action="#">
-    <div class="fields">
-        <div class="field">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" />
-        </div>
-        <div class="field">
-            <br><label for="email">Email</label>
-            <input type="text" name="email" id="email" />
-        </div>
-        <div class="field">
-            <br><label for="address">Address</label>
-            <input type="text" name="address" id="address" />
-        </div>
-    </div>
-    <ul class="actions">
-        <li><input type="submit" value="Send Message" /></li>
-    </ul>
-</form>
-
-
-</form>
-<?php
