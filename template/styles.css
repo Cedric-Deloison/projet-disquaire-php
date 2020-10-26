@@ -79,5 +79,12 @@ body {
   height: auto;
   margin: 20px;
 }  
+.form-group {
+  text-align: center;
+}
+.form h2 {
+  text-align: center;
+  color: red;
+}
 
 /* Fin */

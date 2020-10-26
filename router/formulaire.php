@@ -1,5 +1,5 @@
 
-<?php 
+<?php
 
 
 $sql = "SELECT * FROM albums U, artistes M WHERE U.id = $_GET[id] AND U.artiste = M.id";
@@ -12,28 +12,28 @@ foreach ($dbh->query($sql) as $row) {
   $artiste = $row['noms'];
 }
 
-$contenu='
+$contenu = '
       <div class="form">
       <h2>Formulaire de réservation</h2>
 
       <form action="resultat-post.php" method="post">
           <div class="form-group">
-          <img src="template/'.$photo.'" class="card-img-top" alt="..." >
+          <img src="template/' . $photo . '" class="card-img-top" alt="..." >
           </div>
           <div class="form-group">
-            <label >nom</label>
+            <label >Nom :</label>
             <input
               type="text"
-              name="nom"  />
+              name="nom" required />
           </div>
           <div class="form-group">
-            <label >Prénom</label>
+            <label >Prénom :</label>
             <input
               type="text"
-              name="prenom" />
+              name="prenom" required/>
           </div>
           <div class="form-group">
-            <label >Email</label>
+            <label >Email :</label>
             <input
               type="email"
               name="email"      />
@@ -42,21 +42,21 @@ $contenu='
             <input
               type="checkbox"
               class="form-check-input"
-              id="exampleCheck1"  />
+              id="exampleCheck1"required  />
             <label class="form-check-label" for="exampleCheck1">
-              Jaccepte que mes données ci-dessus soient traitées à des
+              J accepte que mes données ci-dessus soient traitées à des
               fins de prises de contact commerciales.</label
             >
           </div>
           <div class="text-center">
-            <button type="submit" class="Envoye">
+            <button type="submit" class="Envoyer">
               Envoyer
             </button>
           </div>
         </form>
-  </div>' ;
+  </div>';
 
 
-$texte = array("contenu"=>$contenu);
+$texte = array("contenu" => $contenu);
 
 ?>

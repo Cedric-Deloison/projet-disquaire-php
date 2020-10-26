@@ -40,8 +40,8 @@ function album($reserve, $photo, $titre, $album, $annee, $genre, $artiste, $desc
     <h5>Nom de l'artiste :<br>  $artiste</h5>
     <h5>Année de parution :<br>  $annee</h5>
     <h5>Genre musical :<br>  $genre</h5>
-   
-    <a href='index.php?page=formulaire&id=".$reserve."' class='btn btn-primary'>Cliquez ici pour le reserver</a>
+
+    <a href='index.php?page=formulaire&id=" . $reserve . "' class='btn btn-primary'>Cliquez ici pour le reserver</a>
 
 
   </div>
@@ -57,4 +57,3 @@ function affich($reserve, $photo, $titre, $album, $annee, $genre, $artiste, $des
 }
 
 ?>
-
