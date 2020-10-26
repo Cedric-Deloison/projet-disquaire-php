@@ -2,10 +2,11 @@
 
 <?php
 
-$sql =  'SELECT titre, alimage, annee, album, styles, genre, noms , descriptionAlbums
+$sql =  'SELECT U.id AS reserve, titre, alimage, annee, album, styles, genre, noms , descriptionAlbums
 FROM albums U, genres N, artistes M , descriptions D
 WHERE N.id = U.genre AND M.id = U.artiste AND D.id = U.description
 ORDER BY album';
+
 
 $dbh->query("SET NAMES utf8");
 
@@ -17,17 +18,18 @@ foreach ($dbh->query($sql) as $row) {
   $genre = $row['styles'];
   $photo = $row['alimage'];
   $artiste = $row['noms'];
+  $reserve = $row['reserve'];
   $description = $row['descriptionAlbums'];
 
 
 
-  $contenu .= affich($photo, $titre, $album, $annee, $genre, $artiste, $description);
+  $contenu .= affich($reserve, $photo, $titre, $album, $annee, $genre, $artiste, $description);
 }
 
 
 $texte = array("titre" => "Bienvenue", "sous-titre" => "Un site dynamique", "contenu" => $contenu);
 
-function album($photo, $titre, $album, $annee, $genre, $artiste, $description)
+function album($reserve, $photo, $titre, $album, $annee, $genre, $artiste, $description)
 {
 
   return "<div class='card' style='width: 18rem;'>
@@ -39,17 +41,19 @@ function album($photo, $titre, $album, $annee, $genre, $artiste, $description)
     <h5>Année de parution :<br>  $annee</h5>
     <h5>Genre musical :<br>  $genre</h5>
    
-    <a href='index.php?page=formulaire' class='btn btn-primary'>Cliquez ici pour le reserver</a>
+    <a href='index.php?page=formulaire&id=".$reserve."' class='btn btn-primary'>Cliquez ici pour le reserver</a>
+
+
   </div>
 </div>";
 }
 
 
 
-function affich($photo, $titre, $album, $annee, $genre, $artiste, $description)
+function affich($reserve, $photo, $titre, $album, $annee, $genre, $artiste, $description)
 {
   return
-    album($photo, $titre, $album, $annee, $genre, $artiste, $description);
+    album($reserve, $photo, $titre, $album, $annee, $genre, $artiste, $description);
 }
 
 ?>
